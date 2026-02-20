@@ -4,6 +4,7 @@ import { Leaf, Heart, Coffee } from "lucide-react";
 import heroImage from "@/assets/hero-shop.jpg";
 import teestubeImage from "@/assets/teestube.jpg";
 import productsImage from "@/assets/products-overview.jpg";
+import ausstattungImage from "@/assets/ausstattung-laden.webp";
 
 const highlights = [
   {
@@ -138,6 +139,89 @@ const Index = () => {
                 className="inline-block bg-primary text-primary-foreground font-body text-sm uppercase tracking-wider px-6 py-3 rounded-md hover:bg-primary/90 transition-colors"
               >
                 Besuchen Sie uns
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Wer wir sind Teaser */}
+      <section className="section-padding bg-background">
+        <div className="container-narrow">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="order-2 md:order-1"
+            >
+              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
+                Wer wir sind
+              </h2>
+              <p className="font-body text-muted-foreground leading-relaxed mb-4">
+                Seit 2001 ist die Oasen der Gesundheit ein Ort der Achtsamkeit in Eschweiler. 
+                In liebevoll restaurierten Räumen verbinden sich antike Einrichtungsgegenstände 
+                mit natürlichen Produkten zu einem einzigartigen Erlebnis.
+              </p>
+              <Link
+                to="/ueber-uns"
+                className="inline-block border border-primary text-primary font-body text-sm uppercase tracking-wider px-6 py-3 rounded-md hover:bg-primary hover:text-primary-foreground transition-colors"
+              >
+                Mehr über uns
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="order-1 md:order-2"
+            >
+              <img
+                src={heroImage}
+                alt="Oasen der Gesundheit – Ladeninneres"
+                className="rounded-lg w-full aspect-square object-cover"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ausstattung Teaser */}
+      <section className="section-padding bg-card">
+        <div className="container-narrow">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+            >
+              <img
+                src={ausstattungImage}
+                alt="Unsere einzigartige Ausstattung"
+                className="rounded-lg w-full aspect-square object-cover"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+            >
+              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
+                Unsere Ausstattung
+              </h2>
+              <p className="font-body text-muted-foreground leading-relaxed mb-4">
+                Antike Möbel, historisches Mauerwerk und ein Gebälk aus 600 Jahre alten Bäumen – 
+                jeder Raum erzählt seine eigene Geschichte und lädt zum Verweilen ein.
+              </p>
+              <Link
+                to="/ausstattung"
+                className="inline-block border border-primary text-primary font-body text-sm uppercase tracking-wider px-6 py-3 rounded-md hover:bg-primary hover:text-primary-foreground transition-colors"
+              >
+                Ausstattung entdecken
               </Link>
             </motion.div>
           </div>
