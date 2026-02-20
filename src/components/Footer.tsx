@@ -21,6 +21,7 @@ const Footer = () => {
               {[
                 { label: "Startseite", path: "/" },
                 { label: "Wer wir sind", path: "/ueber-uns" },
+                { label: "Unser Ladenlokal", path: "/ausstattung" },
                 { label: "Unsere Produkte", path: "/produkte" },
                 { label: "Kontakt", path: "/kontakt" },
               ].map((item) => (

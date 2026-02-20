@@ -211,7 +211,7 @@ const Index = () => {
               transition={{ duration: 0.7, delay: 0.2 }}
             >
               <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
-                Unsere Ausstattung
+                Unser Ladenlokal
               </h2>
               <p className="font-body text-muted-foreground leading-relaxed mb-4">
                 Antike Möbel, historisches Mauerwerk und ein Gebälk aus 600 Jahre alten Bäumen – 

@@ -36,7 +36,7 @@ const AusstattungPage = () => {
             transition={{ duration: 0.7 }}
             className="font-display text-4xl md:text-5xl text-foreground mb-4"
           >
-            Unsere Ausstattung
+            Unser Ladenlokal
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
