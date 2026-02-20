@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const navItems = [
   { label: "Startseite", path: "/" },
   { label: "Wer wir sind", path: "/ueber-uns" },
-  { label: "Unsere Ausstattung", path: "/ausstattung" },
+  { label: "Unser Ladenlokal", path: "/ausstattung" },
   { label: "Unsere Produkte", path: "/produkte" },
   { label: "Kontakt", path: "/kontakt" },
 ];
