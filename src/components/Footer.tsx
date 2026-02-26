@@ -23,7 +23,8 @@ const Footer = () => {
                 { label: "Wer wir sind", path: "/ueber-uns" },
                 { label: "Unser Ladenlokal", path: "/ausstattung" },
                 { label: "Unsere Produkte", path: "/produkte" },
-                { label: "Kontakt", path: "/kontakt" },
+              { label: "Kontakt", path: "/kontakt" },
+              { label: "Impressum", path: "/impressum" },
               ].map((item) => (
                 <li key={item.path}>
                   <Link
