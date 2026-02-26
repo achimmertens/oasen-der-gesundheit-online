@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "predeploy": "npm run build && echo oasendergesundheit.de > dist/CNAME",
+    "predeploy": "npm run build && echo www.oasendergesundheit.de > dist/CNAME",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

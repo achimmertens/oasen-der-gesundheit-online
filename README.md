@@ -79,7 +79,7 @@ Da dies immer wieder überschrieben wird, machen wir das automatisch in der pack
 ```
 "name": "vite_react_shadcn_ts",
   "private": true,
-  "homepage": "https://fewo.amertens.me",
+  "homepage": "https://oasendergesundheit.de",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -88,7 +88,7 @@ Da dies immer wieder überschrieben wird, machen wir das automatisch in der pack
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build && echo oasendergesundheit.de > dist/CNAME",
+    "predeploy": "npm run build && echo www.oasendergesundheit.de > dist/CNAME",
     "deploy": "gh-pages -d dist"
   },
 ```
@@ -99,6 +99,7 @@ b) Domain bei deinem Provider (Strato) umstellen:
 - Gehe zum DNS-Editor für amertens.me
 - Erstelle einen CNAME-Eintrag für www mit folgendem Ziel:
   dein-github-nutzername.github.io.
+
 
 (Beispiel: achimmertens.github.io. – Punkt am Ende ist wichtig bei manchen DNS-Systemen)
 
@@ -113,6 +114,11 @@ Nach ein paar Minuten sollte deine Webseite unter amertens.me erreichbar sein.
 5. Pflege und Updates
 
 git tag -a v1.0.0 -m "Erstes Release"
+
+# Zusammenfassung der Domainbeauftragung mit eigenen Worten
+Ich habe bei United Domains die Domäne "oasendergesundheit.de" gekauft (Für 3 €/Jahr, dacht ich, sah dann aber das Kleingedruckte mit 18€/ahr). Besser wäre Strato gewesen, da dort die Handhabung einfacher ist.
+Ich habe dann den CNAME (welches ein Alias ist so eingerichtet, dass www.oasendergesundheit.de auf achimmertens.github.io zeigt. Github Pages kann damit was anfangen, weil in meiner dist/CNAME Datei auch www.oasendergesundheit.de steht. Weiterhin habe ich in United Domains einen Redirect von oasendergesundheit.de auf www.oasendergesundheit.de eingerichtet, damit die Seite auch ohne www erreichbar ist. Dies habe ich bei der Web Weiterleitung eingetragen.
+
 
 
 # 📝 Zusammenfassung
