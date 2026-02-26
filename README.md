@@ -123,6 +123,7 @@ Ich habe dann den CNAME (welches ein Alias ist so eingerichtet, dass www.oasende
 
 # 📝 Zusammenfassung
 - npm run build	 -> Statischen Build erstellen
+- npx http-server dist/ -> Build lokal testen
 - npm run deploy -> Mit gh-pages auf GitHub hochladen
 - GitHub Settings > Pages	Branch gh-pages auswählen
 - CNAME-Datei ->	Domain festlegen

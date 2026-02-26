@@ -31,7 +31,7 @@ const ImpressumPage = () => {
 
           <section>
             <h2 className="text-lg font-semibold text-foreground mb-2">Vertreten durch</h2>
-            <p>xxxx</p>
+            <p>Heinz Mertes</p>
           </section>
 
           <section>
@@ -58,7 +58,7 @@ const ImpressumPage = () => {
           <section>
             <h2 className="text-lg font-semibold text-foreground mb-2">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
             <p>
-              xxxx<br />
+              Heinz Mertes<br />
               Langwahn 58<br />
               52249 Eschweiler
             </p>
@@ -78,7 +78,7 @@ const ImpressumPage = () => {
 
           <div className="mt-12 pt-6 border-t border-border text-center">
             <p className="text-sm italic text-muted-foreground">
-              Diese Seite befindet sich derzeit noch im Aufbau.
+              Diese Homepage befindet sich derzeit (Stand 26.02.2026) noch im Aufbau.
             </p>
           </div>
         </motion.div>
