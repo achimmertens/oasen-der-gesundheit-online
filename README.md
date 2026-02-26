@@ -1,73 +1,123 @@
-# Welcome to your Lovable project
 
-## Project info
+# Schritt-für-Schritt: GitHub Pages für eine Node.js-Webseite einrichten
+🧱 Beispiel: Du hast ein Projekt mit z. B. Vue.js, Vite oder React
+1. Seite lokal bauen
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+In deinem Projektordner:
 
-## How can I edit this code?
+npm install
+npm run build
 
-There are several ways of editing your application.
+➡️ Das erzeugt einen Ordner (z. B. dist/ oder build/), der die statische Version deiner Seite enthält.
 
-**Use Lovable**
+1.1 Regelmäßige Updates
+Die Browserliste muss alle paar Monate mal aktualisiert werden, damit die Seite auf aktuellen Browsern gut läuft.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Dazu sollten folgende Befehle ausgeführt werden:
 
-Changes made via Lovable will be committed automatically to this repo.
+npm update caniuse-lite
+npm audit fix
+npm run build
+npm run deploy
 
-**Use your preferred IDE**
+1.2 Build überprüfen
+Vor einem Deployment kann es sinnvoll sein, den Build lokal zu überprüfen:
+dist-Ordner löschen (optional):
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+rm -rf dist/
+npm run build
+npx http-server dist/
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+➡️ Dann im Browser http://localhost:8080 öffnen und testen.
 
-Follow these steps:
+2. Den statischen Build auf einen separaten Branch pushen
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+GitHub Pages kann Inhalte aus einem Branch wie gh-pages anzeigen.
+Dazu kannst du das Paket gh-pages nutzen:
+a) Installieren:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+npm install --save-dev gh-pages
 
-# Step 3: Install the necessary dependencies.
-npm i
+b) In deiner package.json:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+Füge Folgendes hinzu:
+
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+}
+
+c) Deployment:
+
+npm run deploy
+
+➡️ Dadurch wird dein dist-Ordner auf den Branch gh-pages gepusht und öffentlich verfügbar gemacht.
+1. GitHub Pages aktivieren
+
+Gehe auf deine Repository-Seite bei GitHub
+
+Klicke auf Settings > Pages
+
+Wähle bei Source den Branch gh-pages und ggf. den Ordner /root aus
+
+![alt text](image-1.webp)
+Speichern 
+Nach ein paar Sekunden ist deine Seite unter:
+https://dein-github-nutzername.github.io/repository-name/
+als Beispiel: https://achimmertens.github.io/oasen-der-gesundheit-online/
+
+🌍 4. Eigene Domain (z. B. amertens.me) verbinden
+a) CNAME-Datei erstellen
+
+Lege im dist/-Ordner (vor dem Deployment) eine Datei namens CNAME an mit folgendem Inhalt:
+
+amertens.me
+
+Dann wird diese Datei bei npm run deploy mit hochgeladen.
+
+Da dies immer wieder überschrieben wird, machen wir das automatisch in der package.json Datei:
+```
+"name": "vite_react_shadcn_ts",
+  "private": true,
+  "homepage": "https://fewo.amertens.me",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:dev": "vite build --mode development",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "predeploy": "npm run build && echo oasendergesundheit.de > dist/CNAME",
+    "deploy": "gh-pages -d dist"
+  },
 ```
 
-**Edit a file directly in GitHub**
+b) Domain bei deinem Provider (Strato) umstellen:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- Logge dich bei Strato ein
+- Gehe zum DNS-Editor für amertens.me
+- Erstelle einen CNAME-Eintrag für www mit folgendem Ziel:
+  dein-github-nutzername.github.io.
 
-**Use GitHub Codespaces**
+(Beispiel: achimmertens.github.io. – Punkt am Ende ist wichtig bei manchen DNS-Systemen)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Für die root-Domain (amertens.me ohne www) musst du ggf. A-Records setzen, oder einen Redirect von Strato auf www.amertens.me einrichten (Strato kann das).
 
-## What technologies are used for this project?
+![alt text](image.webp)
 
-This project is built with:
+🧪 Testen
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Nach ein paar Minuten sollte deine Webseite unter amertens.me erreichbar sein.
 
-## How can I deploy this project?
+5. Pflege und Updates
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+git tag -a v1.0.0 -m "Erstes Release"
 
-## Can I connect a custom domain to my Lovable project?
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+# 📝 Zusammenfassung
+- npm run build	 -> Statischen Build erstellen
+- npm run deploy -> Mit gh-pages auf GitHub hochladen
+- GitHub Settings > Pages	Branch gh-pages auswählen
+- CNAME-Datei ->	Domain festlegen
+- DNS bei Strato ->	CNAME auf github.io setzen

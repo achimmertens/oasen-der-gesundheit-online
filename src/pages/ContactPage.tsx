@@ -51,9 +51,8 @@ const ContactPage = () => {
                 <div>
                   <h3 className="font-display text-lg font-semibold text-foreground mb-1">Öffnungszeiten</h3>
                   <div className="font-body text-sm text-muted-foreground space-y-1">
-                    <p>Montag – Freitag: 10:00 – 18:00 Uhr</p>
-                    <p>Samstag: 10:00 – 14:00 Uhr</p>
-                    <p>Sonntag: Geschlossen</p>
+                    <p>Montag – Freitag: 10:00 – 17:00 Uhr</p>
+                    <p>Samstag + Sonntag: Geschlossen</p>
                   </div>
                 </div>
               </div>
