@@ -64,6 +64,7 @@ const ProductsPage = () => {
           <p className="font-body text-muted-foreground text-center max-w-2xl mx-auto leading-relaxed mb-12">
             Jedes Produkt in unserem Sortiment wurde mit Bedacht ausgewählt. Wir legen Wert auf
             Natürlichkeit, Qualität und die Geschichte hinter den Dingen.
+            Im Folgenden zeigen wir Ihnen eine Auswahl unserer beliebtesten Produkte, die Sie in unserem Laden finden können:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
