@@ -18,7 +18,7 @@ import imgWindspiele from "@/assets/Produkte/Windspiele.webp";
 
 const products = [
   { name: "Tees", image: imgTees, description: "Erlesene Teemischungen aus aller Welt – von beruhigendem Kräutertee bis belebendem Grüntee." },
-  { name: "Honig", image: imgHonig, description: "Regionaler Honig von Imkern aus der Umgebung – naturbelassen und voller Geschmack." },
+  { name: "Honig", image: imgHonig, description: "Regionaler Honig von Imkern aus der Umgebung (Gressenich) – naturbelassen und voller Geschmack." },
   { name: "Duftöle", image: imgDuftoele, description: "Naturreine ätherische Öle für Wohlbefinden, Entspannung und Aromatherapie." },
   { name: "Räucherwerk", image: imgRaeucherwerk, description: "Hochwertige Räucherstäbchen und Harze für eine wohltuende Atmosphäre." },
   { name: "Kristalle", image: imgKristalle, description: "Handverlesene Edelsteine und Kristalle – als Dekoration oder für die persönliche Sammlung." },
