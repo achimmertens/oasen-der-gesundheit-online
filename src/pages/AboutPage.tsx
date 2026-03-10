@@ -7,7 +7,7 @@ const AboutPage = () => {
     <main className="pt-20">
       {/* Hero banner */}
       <section className="relative h-[40vh] min-h-[280px] flex items-center justify-center overflow-hidden">
-        <img src={heroImage} alt="Ladeninneres" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={heroImage} alt="Oaseninneres" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-foreground/55" />
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ const AboutPage = () => {
               zu einem einzigartigen Erlebnis für alle Sinne.
             </p>
             <p className="font-body text-muted-foreground leading-relaxed">
-              Der Besitzer legt großen Wert darauf, die Geschichte hinter jedem Gegenstand zu bewahren.
+              Heinz Mertes legt großen Wert darauf, die Geschichte hinter jedem Gegenstand zu bewahren.
               Antike Möbel, die von Handwerkern vergangener Generationen geschaffen wurden, finden hier
               einen neuen Platz – und erzählen ihre Geschichte weiter.
             </p>

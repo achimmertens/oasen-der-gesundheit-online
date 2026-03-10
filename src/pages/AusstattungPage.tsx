@@ -7,8 +7,8 @@ import schmuckImage from "@/assets/ausstattung-schmuck.webp";
 import tischImage from "@/assets/ausstattung-tisch.webp";
 
 const images = [
-  { src: aussenImage, alt: "Schaufenster und Eingang des Ladens" },
-  { src: ladenImage, alt: "Blick in den Laden mit Produkten und Lichtsäulen" },
+  { src: aussenImage, alt: "Schaufenster und Eingang der Oase" },
+  { src: ladenImage, alt: "Blick in die Oase mit Produkten und Lichtsäulen" },
   { src: kristalleImage, alt: "Kristalle, Schmuck und Mineralien" },
   { src: schmuckImage, alt: "Edelstein-Vitrinen und Kettenauswahl" },
   { src: regalImage, alt: "Regale mit Naturprodukten und Büchern" },
@@ -44,7 +44,7 @@ const AusstattungPage = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="font-body text-muted-foreground max-w-2xl mx-auto leading-relaxed"
           >
-            Unser Laden vereint historischen Charme mit liebevoll kuratierter Einrichtung. 
+            Unsere Oase der Gesundheit vereint historischen Charme mit liebevoll kuratierter Einrichtung. 
             Entdecken Sie leuchtende Lichtsäulen, antike Möbelstücke und handgefertigte 
             Vitrinen – jeder Winkel erzählt seine eigene Geschichte.
           </motion.p>
