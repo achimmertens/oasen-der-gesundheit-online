@@ -127,4 +127,4 @@ Ich habe dann den CNAME (welches ein Alias ist so eingerichtet, dass www.oasende
 - npm run deploy -> Mit gh-pages auf GitHub hochladen
 - GitHub Settings > Pages	Branch gh-pages auswählen
 - CNAME-Datei ->	Domain festlegen
-- DNS bei Strato ->	CNAME auf github.io setzen
+- DNS bei Strato/United Domains ->	CNAME auf github.io setzen
